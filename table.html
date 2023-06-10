@@ -1,0 +1,123 @@
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="table.css">
+</head>
+
+<body>
+    <div id="wrapper">
+     <h1>OUR COURSES LIST</h1>
+     <br>
+     <br>
+
+     
+     <table id="keywords" cellspacing="0" cellpadding="0">
+       <thead>
+         <tr>
+           <th><span>Course Name</span></th>
+           <th><span>Instructor</span></th>
+           <th><span>Duration</span></th>
+           <th><span>Fees</span></th>
+           <th><span>Branch</span></th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <td class="lalign">Introduction to Food Science</td>
+           <td>Ava smith</td>
+           <td>5 days</td>
+           <td>60$</td>
+           <td>Jeddah</td>
+         </tr>
+         <tr>
+           <td class="lalign">Culinary Arts</td>
+           <td>Liam jones</td>
+           <td>7 Days</td>
+           <td>80$</td>
+           <td>Riyadh</td>
+         </tr>
+         <tr>
+           <td class="lalign">Baking and Pastry Arts</td>
+           <td>Noah Williams</td>
+           <td>3 days</td>
+           <td>40$</td>
+           <td>Dammam</td>
+         </tr>
+         <tr>
+           <td class="lalign">International Cuisine</td>
+           <td>Emma Davis</td>
+           <td>4 Days</td>
+           <td>50$</td>
+           <td>Jeddah</td>
+         </tr>
+         <tr>
+           <td class="lalign">Vegetarian and Vegan Cooking</td>
+           <td>Mason Miller</td>
+           <td>9 Days</td>
+           <td>100$</td>
+           <td>Dammam</td>
+         </tr>
+         <tr>
+           <td class="lalign">Culinary Nutrition</td>
+           <td>Olivia Brown</td>
+           <td>2 Days</td>
+           <td>30$</td>
+           <td>Riyadh</td>
+         </tr>
+       </tbody>
+     </table>
+     <br><br><br>
+    <form onsubmit="sendEmail(); reset(); return false;">
+     <h2>If You Wnt To Subscribe Fill Up The Form Below :</h2>
+  <input type="text" id="fname" name="fname" placeholder="First name : "><br><br>
+  <input type="text" id="lname" name="lname" placeholder="Last name : "><br><br>
+  <input type="Email" id="Email" name="Email" placeholder="Your Email : "><br><br><br>
+
+
+
+  <label for="Subscribe">Choose the Course Name:</label>
+  <select name="Subscribe" id="Subscribe">
+    <option value="Subscribe">Introduction to Food Science</option>
+    <option value="Subscribe">Culinary Arts</option>
+    <option value="Subscribe">Baking and Pastry Arts</option>
+    <option value="Subscribe">International Cuisine</option>
+    <option value="Subscribe">Culinary Nutrition</option>
+    <option value="Subscribe">Vegetarian and Vegan Cooking</option>
+  </select>
+  <br><br>
+  <label for="1">Please select your Age :</label><br>
+  <input type="radio" name="Age" value="1"><h2>18-25</h2>
+  <input type="radio" name="Age" value="1"><h2>25-30</h2>
+  <input type="radio" name="Age" value="1"><h2>35-40</h2>
+<br><br>
+<button type="submit">Submit</button>
+<br><br>
+</form>
+<p> IF YOU WANT TO CONTACT US YOU CAN USE THE EMAIL :</p>
+<a href="mailto:ChefsKitchen@gmail.com">ChefsKitchen@gmail.com</a>
+<br><br>
+
+
+
+
+    </div> 
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function sendEmail(){
+      Email.send({
+    Host : "smtp.sada.com",
+    Username : "chefskitchen897@gmail.com",
+    Password : "A1F9680F0D1C57751AA8EBAC2CD78FFDA1F0",
+    To : 'chefskitchen897@gmail.com',
+    From : document.getElementById("Email").value,
+    Subject : "New Subscriber",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+    }
+  </script>
+   </body>
+
+</html>
