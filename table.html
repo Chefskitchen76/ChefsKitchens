@@ -68,7 +68,7 @@
        </tbody>
      </table>
      <br><br><br>
-    <form onsubmit="sendEmail(); reset(); return false;">
+     <form action="https://formsubmit.co/chefskitchen897@gmail.com" method="POST">
      <h2>If You Wnt To Subscribe Fill Up The Form Below :</h2>
   <input type="text" id="fname" name="fname" placeholder="First name : "><br><br>
   <input type="text" id="lname" name="lname" placeholder="Last name : "><br><br>
@@ -102,22 +102,7 @@
 
 
     </div> 
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script>
-    function sendEmail(){
-      Email.send({
-    Host : "smtp.sada.com",
-    Username : "chefskitchen897@gmail.com",
-    Password : "A1F9680F0D1C57751AA8EBAC2CD78FFDA1F0",
-    To : 'chefskitchen897@gmail.com',
-    From : document.getElementById("Email").value,
-    Subject : "New Subscriber",
-    Body : "And this is the body"
-}).then(
-  message => alert(message)
-);
-    }
-  </script>
+ 
    </body>
 
 </html>
